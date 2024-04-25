@@ -2,8 +2,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  z-index: auto;
-  isolation: isolate;
 }
 
 .banner__box {
@@ -333,33 +331,23 @@
   }
 
   .banner:not(.banner--mobile-bottom) .field__input,
-  .banner--mobile-bottom:not(.banner--stacked) .banner__box.color-scheme-1 {
+  .banner--mobile-bottom:not(.banner--stacked) .banner__box.color-background-1 {
     background: transparent;
   }
 }
 
 .banner__box {
-  padding: 4rem 1.5rem;
+  padding: 4rem 2rem;
   position: relative;
   height: fit-content;
   align-items: center;
   text-align: center;
   width: 100%;
   word-wrap: break-word;
-  z-index: 1;
-}
-
-.banner--mobile-bottom .banner__box {
-  padding: 4rem 3.5rem;
 }
 
 @media screen and (min-width: 750px) {
-  .banner__box {
-    padding: 4rem 3.5rem;
-  }
-
   .banner--desktop-transparent .banner__box {
-    padding: 4rem 0;
     background: transparent;
     max-width: 89rem;
     border: none;
@@ -405,9 +393,6 @@
   }
 }
 
-.banner__box > * + * {
-  margin-top: 1rem;
-}
 
 .banner__box > *:first-child {
   margin-top: 0;
@@ -422,14 +407,13 @@
 @media screen and (min-width: 750px) {
   .banner__box {
     width: auto;
-    max-width: 71rem;
     min-width: 45rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .banner__box {
-    max-width: 90rem;
+    max-width: 95rem;
   }
 }
 
@@ -471,9 +455,7 @@
   }
 }
 
-.banner__box > * + .banner__buttons {
-  margin-top: 2rem;
-}
+
 
 @media screen and (max-width: 749px) {
   .banner:not(.slideshow) .rte a,
@@ -489,4 +471,104 @@
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
   }
+}
+.my-banner{
+  background-image: url(https://cdn.shopify.com/s/files/1/0859/0491/6785/files/hero_2.png?v=1706632156); 
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
+}
+.my-banner-inner{
+  height: 160vh;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: space-between;
+}
+.my-hero-banner{
+  width: 100%;
+  position: relative;
+  height: 99.5vh;
+  overflow: hidden;
+}
+.my-hero-banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire container */
+}
+.hero_banner_inner{
+  display: flex;
+  align-items: end;
+  height: 100vh;
+}
+.my-banner-inner-top{
+  text-align: center;
+
+  color: var(--Grey-200, #E5E7EA);
+  leading-trim: both;
+
+  text-edge: cap;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'dlig' on;
+  /* font-family: "General Sans"; */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 52.8px */
+  letter-spacing: 0.48px;
+}
+.my-banner-inner-bottom{
+  text-align: center;
+  color: #fff;
+}
+
+.my-banner-inner-bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-banner-inner-bottom-text{
+  color: var(--Grey-200, #E5E7EA);
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: 'dlig' on;
+  font-style: normal;
+  font-weight: 500;
+}
+.my_shop_now_button{
+  display: flex;
+  width: 154px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  background: #E8E8E8;
+
+  /* Shadows/Large */
+  box-shadow: 0px 15px 35px 0px rgba(103, 110, 118, 0.08), 0px 5px 15px 0px rgba(0, 0, 0, 0.12);
+}
+.my-banner-inner-bottom-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-hero-3{
+  background-image: url(); 
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
+
+}
+.text-allure{
+  border-radius: 425px;
+  background: radial-gradient(46.79% 46.79% at 50% 53.21%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.00) 100%);
+  flex-shrink: 0;
+  margin-left: 4px;
 }
